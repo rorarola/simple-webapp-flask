@@ -1,18 +1,37 @@
 # simple-webapp-flask ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-## [web link](https://helloremi.herokuapp.com)
+#### [web link](https://helloremi.herokuapp.com)
 
+## Getting Started
+1. The main structure of this app are shown below.
+```
+├── app/
+│   ├── __init__.py
+│   └── routes.py
+├── microblog.py 
+└── ...
+```
+2. This app use pipenv instead of virtualenv. Here are some basic command for pipenv
+```
+pipenv install        // create virtual environment
+pipenv install flask  // install flask in the virtual environment
+pipenv shell          // start the virtual environment, press ctrl+d to terminate
+pipenv lock --requirements > requirements.txt // generate requirements.txt
+``
 ## Deploy flask web app on heroku
-#### ref:
-- [Heroku Dev Center](https://devcenter.heroku.com/articles/git)
-- [miguelgrinberg's tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-heroku)
-
-#### Procile for Heroku deploying startup setting
+1. create Procile for Heroku deploying startup setting
 ```
 web: gunicorn microblog:app
 ```
-#### shell command for deploying flask web
+2. generate "requirements.txt"
+```
+$ pipenv lock --requirements > requirements.txt
+```
+3. shell command for deploying flask web
 ``` shell
 heroku create -a example-app
 heroku git:remote -a example-app
 git push heroku main:master
 ```
+## ref:
+- [Heroku Dev Center](https://devcenter.heroku.com/articles/git)
+- [miguelgrinberg's tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-heroku)
