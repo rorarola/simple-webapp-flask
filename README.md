@@ -12,7 +12,7 @@
 ├── microblog.py 
 └── ...
 ```
-2. This app use pipenv instead of virtualenv. Here are some basic command for pipenv
+2. For virtual environment I use pipenv instead of virtualenv. Here are some basic command for pipenv.
 ```
 pipenv install        // create virtual environment
 pipenv install flask  // install flask in the virtual environment
