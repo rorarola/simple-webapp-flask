@@ -37,3 +37,4 @@ git push heroku main:master
 ## ref:
 - [Heroku Dev Center](https://devcenter.heroku.com/articles/git)
 - [miguelgrinberg's tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-heroku)
+- [Creating a new Flask project with pipenv by Mike Bell](https://www.codementor.io/@mikebell66/creating-a-new-flask-project-with-pipenv-w5zhmr5bo)
